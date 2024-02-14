@@ -1,0 +1,39 @@
+color_dict = {
+    "red": "rojo",
+    "blue": "azul",
+    "green": "verde",
+    "yellow": "amarillo",
+    "orange": "naranja",
+    "purple": "morado",
+    "pink": "rosa",
+    "brown": "marrón",
+    "white": "blanco",
+    "black": "negro",
+}
+#setters getters
+
+def translate_to_spanish(color):
+    return color_dict.get(color.lower(), "No se encuentra la traducción")
+        
+color_dict.get
+
+def translate_to_english(color):
+    for key, value in color_dict.items():
+        if value.lower() == color.lower():
+            return key
+    return "No se encuentra la traducción"
+
+
+color_input = input("Ingresa un color: ")
+
+
+direction = input("¿Quieres traducir a español (es) o inglés (en)? ")
+
+if direction.lower() == "es":
+    translated_color = translate_to_spanish(color_input)
+    print("Traducción a español:", translated_color)
+elif direction.lower() == "en":
+    translated_color = translate_to_english(color_input)
+    print("Traducción a inglés:", translated_color)
+else:
+    print("Dirección de traducción no válida. Debe ser 'es' o 'en'.")

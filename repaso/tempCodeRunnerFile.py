@@ -1,0 +1,1 @@
+print(objeto.getDireccion())
